@@ -3,7 +3,7 @@ const urlDecode = function (text) {
   let urlDecoded = {};
   for (const keyValue of keyValues) {
     const key = keyValue.split('=')[0];
-    const value = keyValue.split('=')[1].replace(/\W[0-2]{2}/g, ' ');
+    const value = keyValue.split('=')[1].split('%20').join(' ');
     urlDecoded[key] = value;
   }
   return urlDecoded;
