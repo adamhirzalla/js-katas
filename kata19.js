@@ -8,10 +8,9 @@ const queenThreat = function (boardThreat) {
   }
   whiteQ = queens[0];
   blackQ = queens[1];
-  if (whiteQ[0] === blackQ[0] || whiteQ[1] === blackQ[1]) return true; // vertical & horizontal
-  else if (whiteQ[1] - whiteQ[0] === blackQ[1] - blackQ[0]) return true; // right diagonal
-  else if (whiteQ[1] + whiteQ[0] === blackQ[1] + blackQ[0]) return true; // left diagonal
-  else return false;
+  return (whiteQ[0] === blackQ[0] ||
+    whiteQ[1] === blackQ[1] ||
+    Math.abs(whiteQ[0] - blackQ[0]) === Math.abs(whiteQ[1] - blackQ[1])) ? true : false;
 }
 
 const generateBoard = function (whiteQ, blackQ) {
@@ -30,8 +29,8 @@ const generateBoard = function (whiteQ, blackQ) {
   return board;
 }
 
-let whiteQueen = [0, 5];
-let blackQueen = [5, 5];
+let whiteQueen = [2, 4];
+let blackQueen = [5, 1];
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
 console.log(generatedBoard);
 console.log(queenThreat(generatedBoard)); // true
