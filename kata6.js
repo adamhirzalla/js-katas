@@ -1,4 +1,4 @@
-const whereCanIPark = function (spots, vehicle) {
+const whereCanIPark = function(spots, vehicle) {
   // lowerCase => occupied
   // upperCase => FREE
   let spot = 'false';
@@ -53,4 +53,4 @@ console.log(whereCanIPark(
     ['S', 'r', 'S', 'M', 'm', 'S']
   ],
   'motorcycle'
-))
+));

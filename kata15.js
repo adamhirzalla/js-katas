@@ -1,4 +1,4 @@
-const organizeInstructors = function (instructors) {
+const organizeInstructors = function(instructors) {
   const classes = {};
   for (const instructor of instructors) {
     if (classes[instructor.course] === undefined)

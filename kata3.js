@@ -1,12 +1,12 @@
-const numberOfVowels = function (data) {
-  let total = 0
+const numberOfVowels = function(data) {
+  let total = 0;
   for (let char of data) {
-    if (char === 'a' || 
-        char === 'e' || 
-        char === 'i' || 
-        char === 'o' || 
-        char === 'u') 
-        total++;
+    if (char === 'a' ||
+      char === 'e' ||
+      char === 'i' ||
+      char === 'o' ||
+      char === 'u')
+      total++;
   }
   return total;
 };

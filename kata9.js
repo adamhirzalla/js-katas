@@ -1,4 +1,4 @@
-const camelCase = function (input) {
+const camelCase = function(input) {
   let words = input.split(" ");
   let camelCased = "";
   let isFirstWord = true;
@@ -9,9 +9,9 @@ const camelCase = function (input) {
       continue;
     }
     if (word.charCodeAt(0) >= 97 && word.charCodeAt(0) <= 122) { // camel casing needed
-      String.prototype.replaceAt = function (index, replacement) { // function definition off the internet to replace a string character
+      String.prototype.replaceAt = function(index, replacement) { // function definition off the internet to replace a string character
         return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-      }
+      };
       camelCased += word.replaceAt(0, String.fromCharCode(word.charCodeAt(0) - 32)); // capitalize first letter
       continue;
     }

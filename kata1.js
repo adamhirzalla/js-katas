@@ -1,4 +1,4 @@
-const sumLargestNumbers = function (data) {
+const sumLargestNumbers = function(data) {
   let maxA = 0;
   let maxB = 0;
   for (let index of data) {

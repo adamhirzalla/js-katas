@@ -1,5 +1,5 @@
-const conditionalSum = function (values, condition) {
-  let sum = 0
+const conditionalSum = function(values, condition) {
+  let sum = 0;
   for (let value of values) {
     if (condition === 'even' && value % 2 === 0) sum += value;
     else if (condition === 'odd' && value % 2 === 1) sum += value;

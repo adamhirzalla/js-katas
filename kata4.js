@@ -1,4 +1,4 @@
-const instructorWithLongestName = function (instructors) {
+const instructorWithLongestName = function(instructors) {
   let longest = { name: "" };
   for (let instructor of instructors) {
     if (instructor.name.length > longest.name.length) longest = instructor;

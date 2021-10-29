@@ -2,7 +2,8 @@ let prompt = require("prompt-sync")();
 
 // code below (replace this example)
 const guessed = [];
-const rng = Math.floor((Math.random() * 100) + 1)
+const rng = Math.floor((Math.random() * 100) + 1);
+// eslint-disable-next-line no-constant-condition
 while (true) {
   let answer = prompt("Guess a number 1-100: ");
   if (answer === 'quit') break;

@@ -1,35 +1,35 @@
-const makeCase = function (input, styles) {
+const makeCase = function(input, styles) {
   let styledStr = input;
 
   if (styles.includes("camel"))
-    styledStr = input.replace(/\s\w/g, function (str) { return str.toUpperCase().trim(); })
+    styledStr = input.replace(/\s\w/g, str => str.toUpperCase().trim());
 
   else if (styles.includes("pascal"))
-    styledStr = input.replace(/(?:^\w|\s\w)/g, function (str) { return str.toUpperCase().trim(); })
+    styledStr = input.replace(/(?:^\w|\s\w)/g, str => str.toUpperCase().trim());
 
   else if (styles.includes("snake"))
-    styledStr = input.replace(/(?:[_]|\W)/g, "_")
+    styledStr = input.replace(/(?:[_]|\W)/g, "_");
 
   else if (styles.includes("kebab"))
-    styledStr = input.replace(/(?:[_]|\W)/g, "-")
+    styledStr = input.replace(/(?:[_]|\W)/g, "-");
 
   else if (styles.includes("title"))
-    styledStr = input.replace(/(?:^|\s)\w/g, function (str) { return str.toUpperCase(); })
+    styledStr = input.replace(/(?:^|\s)\w/g, str => str.toUpperCase());
 
   if (styles.includes("vowel"))
-    styledStr = styledStr.replace(/[aeiou]/g, function (str) { return str.toUpperCase(); })
+    styledStr = styledStr.replace(/[aeiou]/g, str => str.toUpperCase());
 
   else if (styles.includes("consonant"))
-    styledStr = styledStr.replace(/[^aeiou]/g, function (str) { return str.toUpperCase(); })
+    styledStr = styledStr.replace(/[^aeiou]/g, str => str.toUpperCase());
 
   if (styles.includes("upper"))
-    styledStr = styledStr.replace(/\w/g, function (str) { return str.toUpperCase(); })
+    styledStr = styledStr.replace(/\w/g, str => str.toUpperCase());
 
   else if (styles.includes("lower"))
-    styledStr = styledStr.replace(/\w/g, function (str) { return str.toLowerCase(); })
+    styledStr = styledStr.replace(/\w/g, str => str.toLowerCase());
 
   return styledStr;
-}
+};
 
 console.log(makeCase("this is a string", "camel"));
 console.log(makeCase("this is a string", "pascal"));

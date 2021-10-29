@@ -1,4 +1,5 @@
-const calculateChange = function (total, cash) {
+/* eslint-disable no-fallthrough */
+const calculateChange = function(total, cash) {
   const denoms = {
     twentyDollar: 2000,
     tenDollar: 1000,
@@ -15,41 +16,41 @@ const calculateChange = function (total, cash) {
   let change = {};
 
   switch (true) {
-    case (sum >= denoms.twentyDollar):
-      if (Math.floor(sum / 2000) != 0)
-        change.twentyDollar = Math.floor(sum / 2000);
-      sum = sum % denoms.twentyDollar;
-    case sum >= denoms.tenDollar:
-      if (Math.floor(sum / 1000) != 0)
-        change.tenDollar = Math.floor(sum / 1000);
-      sum = sum % denoms.tenDollar;
-    case sum >= denoms.fiveDollar:
-      if (Math.floor(sum / 500) != 0)
-        change.fiveDollar = Math.floor(sum / 500);
-      sum = sum % denoms.fiveDollar;
-    case sum >= denoms.twoDollar:
-      if (Math.floor(sum / 200) != 0)
-        change.twoDollar = Math.floor(sum / 200);
-      sum = sum % denoms.twoDollar;
-    case sum >= denoms.oneDollar:
-      if (Math.floor(sum / 100) != 0)
-        change.oneDollar = Math.floor(sum / 100);
-      sum = sum % denoms.oneDollar;
-    case sum >= denoms.quarter:
-      if (Math.floor(sum / 25) != 0)
-        change.quarter = Math.floor(sum / 25);
-      sum = sum % denoms.quarter;
-    case sum >= denoms.dime:
-      if (Math.floor(sum / 10) != 0)
-        change.dime = Math.floor(sum / 10);
-      sum = sum % denoms.dime;
-    case sum >= denoms.nickel:
-      if (Math.floor(sum / 5) != 0)
-        change.nickel = Math.floor(sum / 5);
-      sum = sum % denoms.nickel;
-    case sum >= denoms.penny:
-      if (Math.floor(sum) != 0)
-        change.penny = Math.floor(sum);
+  case (sum >= denoms.twentyDollar):
+    if (Math.floor(sum / 2000) !== 0)
+      change.twentyDollar = Math.floor(sum / 2000);
+    sum = sum % denoms.twentyDollar;
+  case sum >= denoms.tenDollar:
+    if (Math.floor(sum / 1000) !== 0)
+      change.tenDollar = Math.floor(sum / 1000);
+    sum = sum % denoms.tenDollar;
+  case sum >= denoms.fiveDollar:
+    if (Math.floor(sum / 500) !== 0)
+      change.fiveDollar = Math.floor(sum / 500);
+    sum = sum % denoms.fiveDollar;
+  case sum >= denoms.twoDollar:
+    if (Math.floor(sum / 200) !== 0)
+      change.twoDollar = Math.floor(sum / 200);
+    sum = sum % denoms.twoDollar;
+  case sum >= denoms.oneDollar:
+    if (Math.floor(sum / 100) !== 0)
+      change.oneDollar = Math.floor(sum / 100);
+    sum = sum % denoms.oneDollar;
+  case sum >= denoms.quarter:
+    if (Math.floor(sum / 25) !== 0)
+      change.quarter = Math.floor(sum / 25);
+    sum = sum % denoms.quarter;
+  case sum >= denoms.dime:
+    if (Math.floor(sum / 10) !== 0)
+      change.dime = Math.floor(sum / 10);
+    sum = sum % denoms.dime;
+  case sum >= denoms.nickel:
+    if (Math.floor(sum / 5) !== 0)
+      change.nickel = Math.floor(sum / 5);
+    sum = sum % denoms.nickel;
+  case sum >= denoms.penny:
+    if (Math.floor(sum) !== 0)
+      change.penny = Math.floor(sum);
   }
   return change;
 };

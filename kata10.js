@@ -1,4 +1,4 @@
-const multiplicationTable = function (maxValue) {
+const multiplicationTable = function(maxValue) {
   let table = "";
   for (let i = 1; i <= maxValue; i++) {
     for (let j = 1; j <= maxValue; j++) {
@@ -19,7 +19,7 @@ console.log(multiplicationTable(10));
 // 2 4 6 8 10
 // 3 6 9 12 15
 // 4 8 12 16 20
-// 5 10 15 20 25 
+// 5 10 15 20 25
 
 // 1 2 3 4 5 6 7 8 9 10
 // 2 4 6 8 10 12 14 16 18 20

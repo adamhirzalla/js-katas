@@ -1,4 +1,4 @@
-const repeatNumbers = function (data) {
+const repeatNumbers = function(data) {
   let sol = ""; // string containing all repeated strings of arrays
   let length = 0; // # of array of numbers done
   for (const array of data) {

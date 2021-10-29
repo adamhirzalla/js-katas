@@ -1,4 +1,4 @@
-const urlDecode = function (text) {
+const urlDecode = function(text) {
   const keyValues = text.split('&');
   let urlDecoded = {};
   for (const keyValue of keyValues) {
